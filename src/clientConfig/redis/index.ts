@@ -1,4 +1,4 @@
-import { Redis } from "ioredis";
+import { Redis as IORedis } from "ioredis";
 
 export const redisOptions = {
   host: "localhost",
@@ -8,6 +8,6 @@ export const redisOptions = {
   lazyConnect: true,
   keepAlive: 1000,
 };
-const redis = new Redis(redisOptions);
+const Redis = new IORedis(redisOptions);
 
 export default Redis;
