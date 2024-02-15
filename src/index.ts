@@ -12,15 +12,7 @@ import { RedisPubSub } from 'graphql-redis-subscriptions';
 import { Redis } from 'ioredis';
 import { withFilter } from 'graphql-subscriptions';
 import { GraphQLError } from 'graphql';
-
-const redisOptions = {
-  host: "localhost",
-  port: 6379,
-  password: "redis",
-  db: 0,
-  lazyConnect: true,
-  keepAlive: 1000,
-};
+import { redisOptions } from './clientConfig/redis/index.js';
 
 const PORT = 4000;
 const pubsub = new RedisPubSub({
